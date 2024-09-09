@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="recursos/css/estilo.css">
+
+
+    <style>
+        /* Aquí iría el CSS proporcionado anteriormente */
+        .formulario {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: auto;
+            display: none; /* Ocultar el formulario inicialmente */
+        }
+        /* Botón para mostrar el formulario */
+        #showFormButton {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block; /* Asegúrate de que el botón esté visible */
+            margin: 20px auto; /* Centramos el botón */
+        }
+        #showFormButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+
+    
+
+    <div class="nav">
+        <nav class="nav_inicio">
+            <ul class="inicio">
+                <a href="inicio.html">
+                    <li>Bienvenido Admin</li>
+                </a>
+            </ul>
+            <ul class="sesion">
+                <li>alerta</li>
+                <li>cerra sesion</li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <section>
+        <button id="showFormButton">Nuevo Reporte</button>
+        <div id="formulario" class="formulario">
+            <form action="php/registro_form_suc_cuau.php" method="post" class="formulario_registro">
+                <h2>Formato de supervisión / Evaluación / Observación</h2>
+                <label for="">Fecha de supervición</label>
+                <input type="date" name = "fecha_supervicion">
+                
+                
+                <label for="">Fecha</label>
+                <input type="date" id="fecha_actual" name="fecha_actual" readonly>
+                
+                <label for="">Supervisor</label>
+                <input type="text" name = "supervisor">
+                <label for="">Empleado(a)</label>
+                <input type="text" name = "empleado">
+                <label for="">Sucursal</label>
+                <input type="text" name = "sucursal">
+                <br>
+                    <p>Limpieza</p>
+                    <label for="">Esta limpio al exterior del local, barrido y sin basura en su perimetro</label>
+                    <select name="A4" id="">
+                        <option value="" selected></option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+    
+                    <br>
+                    <label for="">Los vidrios están limpios y despejados, se puede apreciar al interior.</label>
+                    <select name="A8" id="">
+                        <option value="" selected></option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+    
+                    
+                    <br>
+                    <label for="">Los pisos están totalmente limpios al interior del local.</label>
+                    <select name="A18" id="">
+                        <option value="" selected></option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+    
+                    <br>
+                    <label for="">El mostrador presenta un buen aspecto (limpieza y orden).</label>
+                    <select name="A20" id="">
+                        <option value="" selected></option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+    
+                    <br>
+                    <label for="">La vitrina de exposición de los pasteles está limpia  en todas sus áreas</label>
+                    <select name="A34" id="">
+                        <option value="" selected></option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+    
+                    <br>
+                    <label for="">Los muebles y adornos al interior están limpios de polvo, en óptimas condiciones y ordenados dando buen aspecto</label>
+                    <select name="A46" id="">
+                        <option value="" selected></option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+    
+                        <br>
+                        <p>Operacional</p>
+                        <label for="">La temperatura / ventilación interior del local es agradable al accesar al mismo</label>
+                        <select name="A16" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                        <br>
+                        <label for="">Se cuenta con terminal de cobro funcional o manejo de transferencias</label>
+                        <select name="A22" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                        <br>
+                        <label for="">Se cuenta con teléfono propio de la sucursal</label>
+                        <select name="A23" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                        <br>
+                        <label for="">Se cuenta con caja registradora o de almacenamiento de efectivo en optimas ccondiciones</label>
+                        <select name="A24" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                        <br>
+                        <label for="">Se cuenta con buzón de opiniones y sugerencias para los clientes</label>
+                        <select name="A27" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                        <br>
+                        <label for="">Existen encuestas de satisfacción para los clientes en la sucursal</label>
+                        <select name="A28" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                        <br>
+                        <label for="">La sucursal tenía y entregó sus encuestas de satisfacción requeridas por la superviciones</label>
+                        <select name="A29" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                        <br>
+                        <label for="">El termómetro de la vitrina funciona correctamente</label>
+                        <select name="A36" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                        <br>
+                        <label for="">El enfriamiento de la vitrina funciona correctamente sin fallas</label>
+                        <select name="A38" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+    
+                        <br>
+                        <label for="">La heladera se encuentra en funcionamiento óptimo y limpia</label>
+                        <select name="A47" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                        <br>
+                        <label for="">Existe el aviso de decoración de pasteles a la vista del público</label>
+                        <select name="A49" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                        <br>
+                        <label for="">El aspecto del aviso de decoración de pasteles es bueno, no borroso y ni decolorido</label>
+                        <select name="A50" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                        <br>
+                        <label for="">La sucursal respeta el precio establecido por la marca en el precio de los productos</label>
+                        <select name="A55" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                        <br>
+                        <label for="">Las bitácoras de la sucursal se encuentran almacnadas en orden y con limpieza</label>
+                        <select name="A58" id="">
+                            <option value="" selected></option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+    
+                            <br>
+                            <p>Productos</p>
+                            <label for="">La sucursal maneja la Galleta para su venta</label>
+                            <select name="A30" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+                            <br>
+                            <label for="">La sucursal maneja Macarons para venta</label>
+                            <select name="A31" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+                            <br>
+                            <label for="">La sucursal maneja Tartitas para su venta</label>
+                            <select name="A32" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+                            <br>
+                            <label for="">La vitrina de pasteles presenta orden y muestra variedad en los pasteles </label>
+                            <select name="A35" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+                            <br>
+                            <label for="">Todos los pasteles del cuarto frio presentan su lote de elaboración y fecha de caducidad</label>
+                            <select name="A39" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+    
+                            <br>
+                            <label for="">Todos los pasteles de vitrina tienen puesto su lote y fecha de caducidad</label>
+                            <select name="A40" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+    
+                            <br>
+                            <label for="">Todos los pasteles en la vitrina están en la fecha adecuada para su venta</label>
+                            <select name="A41" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+    
+                            <br>
+                            <label for="">El helado y sus contenedores se ven presentables</label>
+                            <select name="A48" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+    
+                            <br>
+                            <label for="">Hay la información de los sabores de los helados a la vista del público</label>
+                            <select name="A51" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+    
+                            <br>
+                            <label for="">Hay la información de los precios de los helados a la vista del público</label>
+                            <select name="A52" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+    
+                            <br>
+                            <label for="">Hay la información de los sabores de los pasteles a la vista del público</label>
+                            <select name="A53" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+    
+                            <br>
+                            <label for="">Hay la información de los precios de los pasteles a la vista del público</label>
+                            <select name="A54" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+    
+                            <br>
+                            <label for="">Velas y adornos extras para vender se encuentran ordenan y a la vista del cliente</label>
+                            <select name="A57" id="">
+                                <option value="" selected></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+    
+    
+                                <br>
+                                <p>Seguridad</p>
+                                <label for="">La vitrina no presenta goteras ni fugas</label>
+                                <select name="A37" id="">
+                                    <option value="" selected></option>
+                                    <option value="si">Si</option>
+                                    <option value="no">No</option>
+                                </select>
+    
+    
+                                <br>
+                                <label for="">Existen todos los señalamientos de exigidos por protección civil: ruta de evacuación, salida de emergencias y punto de reunión al exterior</label>
+                                <select name="A42" id="">
+                                    <option value="" selected></option>
+                                    <option value="si">Si</option>
+                                    <option value="no">No</option>
+                                </select>
+    
+                                <br>
+                                <label for="">Existe extintor funcional en la sucursal bien colocado</label>
+                                <select name="A43" id="">
+                                    <option value="" selected></option>
+                                    <option value="si">Si</option>
+                                    <option value="no">No</option>
+                                </select>
+    
+    
+                                <br>
+                                <label for="">Existe extintor funcional en la sucursal con carga en rango de adecuado funcionamiento</label>
+                                <select name="A44" id="">
+                                    <option value="" selected></option>
+                                    <option value="si">Si</option>
+                                    <option value="no">No</option>
+                                </select>
+    
+    
+                                <br>
+                                <label for="">La salida emergencia se encuentra sin cerrojo, despejada y de facil acceso</label>
+                                <select name="A45" id="">
+                                    <option value="" selected></option>
+                                    <option value="si">Si</option>
+                                    <option value="no">No</option>
+                                </select>
+    
+                                <br>
+    
+                                <br>
+                                <label for="">Nota</label>
+                                <textarea name="" id=""></textarea>
+                                <button class="enviar">Enviar</button>
+    
+            </form>
+        </div>
+    
+    </section>
+
+    <script>
+        // JavaScript para mostrar/ocultar el formulario
+        document.getElementById('showFormButton').addEventListener('click', function() {
+            var formulario = document.getElementById('formulario');
+            if (formulario.style.display === 'none' || formulario.style.display === '') {
+                formulario.style.display = 'block';
+                this.textContent = 'Ocultar Formulario'; // Cambiar el texto del botón
+            } else {
+                formulario.style.display = 'none';
+                this.textContent = 'Mostrar Formulario'; // Cambiar el texto del botón
+            }
+        });
+
+        // Establecer la fecha actual en el campo 'fecha_actual'
+        const hoy = new Date();
+        const dia = String(hoy.getDate()).padStart(2, '0');
+        const mes = String(hoy.getMonth() + 1).padStart(2, '0');
+        const anio = hoy.getFullYear();
+        const fechaHoy = `${anio}-${mes}-${dia}`;
+        document.getElementById('fecha_actual').value = fechaHoy;
+
+        // Verificar si el script se está ejecutando
+        console.log("El script JavaScript se está ejecutando correctamente");
+
+    </script>
+</body>
+</html>
