@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+    background-image: url(../img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Estilo general para el contenedor de la navegación */
+.nav_inicio {
+    height: 100px;
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a los lados izquierdo y derecho */
+    align-items: center; /* Alinea verticalmente en el centro */
+    padding: 30px;
+    background-color: #FB5FAB; /* Fondo opcional */
+}
+
+/* Estilo para las listas, para que los elementos li estén en fila */
+.nav_inicio ul {
+    list-style: none; /* Elimina los puntos de lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Hace que los li se alineen en fila */
+}
+
+/* Estilo opcional para los elementos de lista */
+.nav_inicio li {
+    margin-right: 15px; /* Espacio entre los elementos de la lista */
+}
+
+.nav_inicio li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+
+.botones {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Centra los botones verticalmente (si es necesario) */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 100px;
+}
+
+button {
+    padding: 10px 20px; /* Ajusta el tamaño de los botones */
+    font-size: 16px; /* Tamaño de texto del botón */
+}
+
+
+.botones {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples filas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.botones button {
+    
+    padding: 10px 20px; /* Ajusta el tamaño de los botones */
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el padding se incluya dentro del ancho total */
+}
+ section {
+    margin: 50px;
+ }
+
+
+ /* General form styling */
+.formulario {
+    background-color: white; /* Fondo blanco para el formulario */
+    padding: 20px; /* Espaciado interno para el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+    max-width: 800px; /* Ancho máximo del formulario */
+    margin: auto; /* Centrar formulario en la página */
+}
+
+/* Títulos */
+h2 {
+    color: black; /* Color del texto de los títulos */
+    font-size: 24px; /* Tamaño de fuente */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Etiquetas */
+label {
+    color: black; /* Color del texto de las etiquetas */
+    display: block; /* Mostrar etiquetas como bloques */
+    margin: 10px 0; /* Espacio arriba y abajo de las etiquetas */
+    font-weight: bold; /* Texto en negrita para etiquetas */
+}
+
+/* Estilo para los campos de entrada */
+input[type="date"],
+input[type="text"],
+select,
+textarea {
+    width: 100%; /* Ancho completo para campos de entrada */
+    padding: 8px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio debajo de los campos */
+}
+
+/* Estilo para los botones */
+.enviar {
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.enviar:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el cursor */
+}
+
+/* Estilo para los párrafos (p) */
+p {
+    font-weight: bold; /* Texto en negrita */
+    margin-top: 20px; /* Espacio arriba del párrafo */
+}
